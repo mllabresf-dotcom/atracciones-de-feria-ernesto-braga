@@ -24,6 +24,12 @@ body {
   z-index: 10;
 }
 
+.logo-img img {
+  height: 70px;
+  width: auto;
+  margin-right: 20px;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
