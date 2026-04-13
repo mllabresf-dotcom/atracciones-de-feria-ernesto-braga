@@ -6,23 +6,28 @@
 
   <title>Atracciones de Feria Ernesto Braga | Diversión en Mallorca</title>
 
-  <!-- SEO -->
   <meta name="description" content="Atracciones de Feria Ernesto Braga lleva diversión, adrenalina y atracciones seguras a fiestas, colegios y eventos en toda Mallorca.">
   <meta name="keywords" content="feria, atracciones, Mallorca, hinchables, eventos, fiestas, Ernesto Braga">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="logo.png" alt="Logo Ernesto Braga">
+      <h2>Cargando diversión...</h2>
+      <div class="spinner"></div>
+    </div>
+  </div>
+
   <!-- HEADER -->
-  <header class="header" role="banner">
+  <header class="header">
     <div class="header-left">
-      <a href="#inicio" class="logo-img" aria-label="Inicio">
-        <img src="logo.png" alt="Logo de Atracciones de Feria Ernesto Braga">
+      <a href="#inicio" class="logo-img">
+        <img src="logo.png" alt="Logo Atracciones Ernesto Braga">
       </a>
 
       <div class="logo">
@@ -31,7 +36,11 @@
       </div>
     </div>
 
-    <nav class="nav" role="navigation" aria-label="Menú principal">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav" id="nav">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Atracciones</a></li>
@@ -46,9 +55,9 @@
   <main>
 
     <!-- HERO -->
-    <section id="inicio" class="hero" aria-labelledby="hero-title">
+    <section id="inicio" class="hero">
       <div class="hero-content fade-in">
-        <h1 id="hero-title">La feria llega donde tú estés</h1>
+        <h1>La feria llega donde tú estés</h1>
         <p>
           Atracciones de Feria Ernesto Braga recorre toda Mallorca llevando diversión, adrenalina y momentos inolvidables a fiestas patronales, colegios, eventos privados y celebraciones de todo tipo.
         </p>
@@ -57,10 +66,10 @@
     </section>
 
     <!-- ATRACCIONES -->
-    <section id="servicios" class="section fade-in" aria-labelledby="servicios-title">
-      <h2 id="servicios-title">Nuestras atracciones</h2>
+    <section id="servicios" class="section fade-in">
+      <h2>Nuestras atracciones</h2>
       <p>
-        Disponemos de atracciones para todas las edades, totalmente seguras y supervisadas por personal cualificado. Perfectas para fiestas patronales, colegios, cumpleaños y eventos privados.
+        Disponemos de atracciones para todas las edades, totalmente seguras y supervisadas por personal cualificado.
       </p>
 
       <div class="cards">
@@ -104,8 +113,8 @@
     </section>
 
     <!-- SOBRE NOSOTROS -->
-    <section id="sobre" class="section section-alt fade-in" aria-labelledby="sobre-title">
-      <h2 id="sobre-title">Sobre nosotros</h2>
+    <section id="sobre" class="section section-alt fade-in">
+      <h2>Sobre nosotros</h2>
       <p>
         Somos una empresa familiar con años de experiencia en el sector del entretenimiento.  
         Nuestro objetivo es ofrecer atracciones seguras, modernas y divertidas para todo tipo de eventos en Mallorca.
@@ -117,8 +126,8 @@
     </section>
 
     <!-- EQUIPO -->
-    <section id="equipo" class="section fade-in" aria-labelledby="equipo-title">
-      <h2 id="equipo-title">Nuestro equipo</h2>
+    <section id="equipo" class="section fade-in">
+      <h2>Nuestro equipo</h2>
       <p>
         Contamos con un equipo profesional, formado y comprometido con la seguridad y la diversión.  
         Cada miembro aporta experiencia y dedicación para que cada evento sea un éxito.
@@ -150,8 +159,8 @@
     </section>
 
     <!-- SEGURIDAD -->
-    <section id="seguridad" class="section section-alt fade-in" aria-labelledby="seguridad-title">
-      <h2 id="seguridad-title">Certificados y seguridad</h2>
+    <section id="seguridad" class="section section-alt fade-in">
+      <h2>Certificados y seguridad</h2>
       <p>
         La seguridad es nuestra prioridad. Todas nuestras atracciones cumplen con las normativas vigentes y son revisadas periódicamente.
       </p>
@@ -166,11 +175,11 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section fade-in" aria-labelledby="contacto-title">
-      <h2 id="contacto-title">Contacto</h2>
+    <section id="contacto" class="section fade-in">
+      <h2>Contacto</h2>
       <p>Cuéntanos tu idea y te preparamos un presupuesto sin compromiso.</p>
 
-      <form class="contact-form" aria-label="Formulario de contacto">
+      <form class="contact-form">
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input id="nombre" type="text" placeholder="Tu nombre" required>
@@ -192,10 +201,21 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <p>© 2026 Atracciones de Feria Ernesto Braga — Vamos por todo Mallorca</p>
   </footer>
 
+  <!-- JS MENU -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      nav.classList.toggle("open");
+    });
+  </script>
+
 </body>
 </html>
+
